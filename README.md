@@ -1,0 +1,2 @@
+# Solidaria.Core
+Clean Architecture
