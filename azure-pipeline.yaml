@@ -1,0 +1,16 @@
+resources:
+  repositories:
+    - repository: PipelineTemplates
+      name: PipelineTemplates
+      ref: refs/heads/main
+      type: git
+    - repository: self
+trigger:
+  branches:
+    include:
+      - main
+
+extends:
+  template: PackAndPublishNuget.yaml@PipelineTemplates
+  parameters:
+    ProjectFileName: "Solidaria.Core"
